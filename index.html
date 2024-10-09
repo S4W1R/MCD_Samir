@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mercado</title>
+</head>
+<style>
+    
+    body {font-family: Arial, sans-serif; }
+    .container { width: 600px; margin: 0 auto; }
+    h1 { text-align: center; }
+    form { margin: 20px 0; padding: 20px; border: 1px solid #ffffff; }
+    input[type="text"], input[type="number"], input[type="submit"] { width: 100%; padding: 10px; margin: 5px 0; }
+</style>
+</head>
+<body>
+
+<body>
+
+<div class="container">
+    <h1>Estoque do Mercado</h1>
+
+    <h2>Adicionar Produto</h2>
+    <form action="estoque.php" method="POST">
+        <input type="hidden" name="acao" value="adicionar">
+        <input type="number" name="codigo" placeholder="Código do produto" required>
+        <input type="text" name="nome" placeholder="Nome do produto" required>
+        <input type="number" name="quantidade" placeholder="Quantidade" required>
+        <input type="number" name="preco" placeholder="Preço" step="0.01" required>
+        <input type="submit" value="Adicionar Produto">
+    </form>
+
+    <h2>Listar Produtos</h2>
+    <form action="estoque.php" method="POST">
+        <input type="hidden" name="acao" value="listar">
+        <input type="submit" value="Listar Produtos">
+    </form>
+
+    <h2>Buscar Produto</h2>
+    <form action="estoque.php" method="POST">
+        <input type="hidden" name="acao" value="buscar">
+        <input type="number" name="codigo" placeholder="Código do produto" required>
+        <input type="submit" value="Buscar Produto">
+    </form>
+
+    <h2>Atualizar Quantidade</h2>
+    <form action="estoque.php" method="POST">
+        <input type="hidden" name="acao" value="atualizar">
+        <input type="number" name="codigo" placeholder="Código do produto" required>
+        <input type="number" name="quantidade" placeholder="Quantidade a adicionar" required>
+        <input type="submit" value="Atualizar Quantidade">
+    </form>
+
+    <h2>Deletar Produto</h2>
+    <form action="estoque.php" method="POST">
+        <input type="hidden" name="acao" value="deletar">
+        <input type="number" name="codigo" placeholder="Código do produto" required>
+        <input type="submit" value="Deletar Produto">
+    </form>
+</div>
+
+</body>
+</html>
