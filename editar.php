@@ -10,7 +10,7 @@
     <?php 
         require 'conexao.php';
         $id = $_REQUEST["id"];
-        $dados = []; // criando variavel vetor
+        $dados = []; 
        $sql = $pdo->prepare("SELECT * FROM usuario WHERE id = :id");
        $sql->bindValue(":id",$id);
        $sql->execute();

@@ -1,14 +1,14 @@
 <?php 
 require 'conexao.php';
  $sql = $pdo->query("SELECT * FROM usuario");
-// Criando um vetor para receber o resultado da consulta
+
  $lista = [];
  $lista = $sql->fetchAll(PDO::FETCH_ASSOC);
 
- //if($sql->rowCount()>0){
- //   $lista = $sql->fetchAll(PDO::FETCH_ASSOC);
+ if($sql->rowCount()>0){
+   $lista = $sql->fetchAll(PDO::FETCH_ASSOC);
 
- //}
+ }
 
 ?>
 

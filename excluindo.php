@@ -1,5 +1,5 @@
 <?php 
-    require 'conexao.php'; // chama arquivo que cria a conexão
+    require 'conexao.php'; 
     $nome = $_POST['nome'];
     $email = $_POST['email'];
     $id = $_POST['id'];
