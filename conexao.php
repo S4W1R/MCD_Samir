@@ -1,8 +1,5 @@
-<?php
-$pdo =  new PDO("mysql:dbname-test;host-localhost:3306","root","");
+<?php 
 
-if($pdo) {
-        echo "banco conectado!";
-    }
+  $pdo = new PDO("mysql:dbname=test;host=localhost:3307","root","");
 
 ?>
