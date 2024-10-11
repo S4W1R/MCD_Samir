@@ -1,5 +1,4 @@
-<?php 
-
-  $pdo = new PDO("mysql:dbname=test;host=localhost:3306","root","cimatec");
+<?php
+$pdo =  new PDO("mysql:dbname=Mercado6;host=localhost:3306","root","cimatec");
 
 ?>

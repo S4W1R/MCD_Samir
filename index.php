@@ -1,17 +1,19 @@
 <?php 
 require 'conexao.php';
- $sql = $pdo->query("SELECT * FROM usuario");
+ $sql = $pdo->query("SELECT * FROM produto");
 
  $lista = [];
  $lista = $sql->fetchAll(PDO::FETCH_ASSOC);
+ $sql->execute();
 
  if($sql->rowCount()>0){
    $lista = $sql->fetchAll(PDO::FETCH_ASSOC);
 
  }
 
+ var_dump($lista);
 ?>
-
+<!--
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
